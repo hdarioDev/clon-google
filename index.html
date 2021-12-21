@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-rigth-section">
+                <li>
+                    <a href=""> Gmail </a>
+                </li>
+                <li><a href=""> Imágenes </a></li>
+                <li class="menu-icon"><a href=""> </a></li>
+                <li><a href=""> <img
+                            src="https://lh3.googleusercontent.com/a-/AOh14GjKoQIZ7acajPKFaVHYtyE44jo_3UHc37g8ZHb9=s30"
+                            alt="hdariodev"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main-logo">
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="">
+        </section>
+        <section class="main-input">
+            <div class="grid-container main-input-container">
+                <span class="search-icon">
+
+                </span>
+                <input maxlength="512" id="searchTxt" type="text" />
+                <a class="micro-icon" href=""></a>
+            </div>
+        </section>
+        <section class="main-buttons">
+            <div>
+                <button id="searchGoogle">Buscar con Google</button>
+            </div>
+            <div>
+                <button id="searchSuerte">
+                    Me siento con suerte
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul class="footer-left">
+            <li><a href="">Publicidad</a></li>
+            <li><a href="">Negocios</a></li>
+            <li><a href="">Acerca de</a></li>
+            <li><a href="">Cómo funciona</a></li>
+        </ul>
+        <ul class="footer-right">
+            <li><a href="">Privacidad</a></li>
+            <li><a href="">Condiciones</a></li>
+            <li><a href="">Preferencias</a></li>
+        </ul>
+    </footer>
+</body>
+<script>
+
+    let buttonGoogle = document.getElementById('searchGoogle')
+    buttonGoogle.addEventListener("click", function () {
+        findInExplorer()
+    })
+
+    let ButtonSuerte = document.getElementById('searchSuerte')
+    ButtonSuerte.addEventListener("click", function () {
+        findInExplorer()
+    })
+
+    // Get the input field
+    var input = document.getElementById("searchTxt");
+
+    input.addEventListener("keyup", function (event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+
+            findInExplorer()
+        }
+    });
+
+    function findInExplorer() {
+        if (document.getElementById('searchTxt').value.trim() !== "") {
+            window.location.href = "https://www.google.com/search?q=" + document.getElementById('searchTxt').value;
+            document.getElementById('searchTxt').value = ''
+        }
+
+    }
+
+</script>
+
+</html>
