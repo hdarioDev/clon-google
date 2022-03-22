@@ -1,6 +1,9 @@
 # project using javascrip vanilla
 
 Page clone google using javascript, html and css,  responsive.
+##Demo
+
+https://clinquant-babka-7f2166.netlify.app
 
 ## desktop mode
 
